@@ -1,8 +1,10 @@
 #include <iostream>
 #include <map>
+
 using namespace std;
 
-int main() {
+int main()
+{
     int n;
     cin >> n;
     cin.ignore();
@@ -10,7 +12,8 @@ int main() {
     map<string, string> phoneBook;
 
     // Read the phone book entries
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         string name, phoneNumber;
         cin >> name >> phoneNumber;
         phoneBook[name] = phoneNumber;
@@ -18,10 +21,14 @@ int main() {
 
     // Process queries
     string query;
-    while (cin >> query) {
-        if (phoneBook.find(query) != phoneBook.end()) {
+    while (cin >> query)
+    {
+        if (phoneBook.find(query) != phoneBook.end())
+        {
             cout << query << "=" << phoneBook[query] << endl;
-        } else {
+        }
+        else
+        {
             cout << "Not found" << endl;
         }
     }
